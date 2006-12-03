@@ -17,7 +17,7 @@ and portable, can output the document in your console encoding, and
 has very few external dependencies.
 
 %description -l pl
-odt2txt wydobywa tekst z fotmatu OpenDocument Text. Jest ma³y, szybki
+odt2txt wydobywa tekst z formatu OpenDocument Text. Jest ma³y, szybki
 i przeno¶ny. Obs³uguje ró¿ne kodowania wyj¶ciowe i ma niewiele
 zewnêtrznych zale¿no¶ci.
 
