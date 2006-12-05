@@ -8,7 +8,6 @@ Group:		Applications/Publishing
 Source0:	http://stosberg.net/odt2txt/%{name}-%{version}.tar.gz
 # Source0-md5:	5b9e27a50f86c733172cdc456d33e3ed
 URL:		http://stosberg.net/odt2txt/
-Requires:	libiconv
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
