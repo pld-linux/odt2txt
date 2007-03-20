@@ -1,5 +1,5 @@
 Summary:	A simple converter from OpenDocument Text to plain text
-Summary(pl.UTF-8):	Prosty konwerter z formatu OpenDocument Text do zwyk≈Çego tekstu
+Summary(pl):	Prosty konwerter z formatu OpenDocument Text do zwyk≥ego tekstu
 Name:		odt2txt
 Version:	0.2
 Release:	1
@@ -15,10 +15,10 @@ odt2txt extracts the text out of OpenDocument Texts. It is small, fast
 and portable, can output the document in your console encoding, and
 has very few external dependencies.
 
-%description -l pl.UTF-8
-odt2txt wydobywa tekst z formatu OpenDocument Text. Jest ma≈Çy, szybki
-i przeno≈õny. Obs≈Çuguje r√≥≈ºne kodowania wyj≈õciowe i ma niewiele
-zewnƒôtrznych zale≈ºno≈õci.
+%description -l pl
+odt2txt wydobywa tekst z formatu OpenDocument Text. Jest ma≥y, szybki
+i przeno∂ny. Obs≥uguje rÛøne kodowania wyj∂ciowe i ma niewiele
+zewnÍtrznych zaleøno∂ci.
 
 %prep
 %setup -q
