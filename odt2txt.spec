@@ -1,12 +1,12 @@
 Summary:	A simple converter from OpenDocument Text to plain text
 Summary(pl.UTF-8):	Prosty konwerter z formatu OpenDocument Text do zwykłego tekstu
 Name:		odt2txt
-Version:	0.3
+Version:	0.4
 Release:	1
 License:	GPL v2
 Group:		Applications/Publishing
 Source0:	http://stosberg.net/odt2txt/%{name}-%{version}.tar.gz
-# Source0-md5:	7aaecded00c4a5053ec5fdb893707a46
+# Source0-md5:	6fe3bd261ce2dde2810244bbe969bbc5
 URL:		http://stosberg.net/odt2txt/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -30,7 +30,9 @@ zewnętrznych zależności.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -D %{name} $RPM_BUILD_ROOT%{_bindir}/%{name}
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT \
+	PREFIX=%{_prefix}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -38,3 +40,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
+%{_mandir}/man*/*
