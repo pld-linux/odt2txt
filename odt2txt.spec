@@ -8,6 +8,7 @@ Group:		Applications/Publishing
 Source0:	http://stosberg.net/odt2txt/%{name}-%{version}.tar.gz
 # Source0-md5:	6fe3bd261ce2dde2810244bbe969bbc5
 URL:		http://stosberg.net/odt2txt/
+BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
