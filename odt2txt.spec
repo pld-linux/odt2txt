@@ -30,12 +30,15 @@ zewnętrznych zależności.
 %{__make} \
 	CC="%{__cc}" \
 	CFLAGS="%{rpmcflags} -DHAVE_LIBZIP %(pkg-config --cflags libzip)" \
+	HAVE_LIBZIP=1 \
+	LDFLGS="%{rpmldflags}" \
 	LIBS="%(pkg-config --libs libzip) -lz"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
+	HAVE_LIBZIP=1 \
 	PREFIX=%{_prefix}
 
 %clean
@@ -43,5 +46,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc README.md
 %attr(755,root,root) %{_bindir}/odt2txt
 %{_mandir}/man1/odt2txt.1*
