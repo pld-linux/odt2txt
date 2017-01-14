@@ -1,13 +1,15 @@
 Summary:	A simple converter from OpenDocument Text to plain text
 Summary(pl.UTF-8):	Prosty konwerter z formatu OpenDocument Text do zwykłego tekstu
 Name:		odt2txt
-Version:	0.4
+Version:	0.5
 Release:	1
 License:	GPL v2
 Group:		Applications/Publishing
-Source0:	http://stosberg.net/odt2txt/%{name}-%{version}.tar.gz
-# Source0-md5:	6fe3bd261ce2dde2810244bbe969bbc5
+Source0:	https://github.com/dstosberg/odt2txt/archive/v%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	8154dc7f2909dad6939d209695e62379
 URL:		http://stosberg.net/odt2txt/
+BuildRequires:	pkgconfig
+BuildRequires:	libzip-devel
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -27,7 +29,8 @@ zewnętrznych zależności.
 %build
 %{__make} \
 	CC="%{__cc}" \
-	CFLAGS="%{rpmcflags}"
+	CFLAGS="%{rpmcflags} -DHAVE_LIBZIP %(pkg-config --cflags libzip)" \
+	LIBS="%(pkg-config --libs libzip) -lz"
 
 %install
 rm -rf $RPM_BUILD_ROOT
