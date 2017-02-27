@@ -2,7 +2,7 @@ Summary:	A simple converter from OpenDocument Text to plain text
 Summary(pl.UTF-8):	Prosty konwerter z formatu OpenDocument Text do zwykłego tekstu
 Name:		odt2txt
 Version:	0.5
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications/Publishing
 Source0:	https://github.com/dstosberg/odt2txt/archive/v%{version}/%{name}-%{version}.tar.gz
